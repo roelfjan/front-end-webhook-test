@@ -1,6 +1,6 @@
 {
-  urls: [
+  "urls": [
     "http://haags.nu"
   ],
-  runs: 1
+  "runs": 1
 }
