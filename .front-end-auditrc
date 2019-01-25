@@ -5,19 +5,19 @@
   "runs": 1,
   "lighthouse": {
     "pwa": {
-      "score": .8
+      "score": 0.8
     },
     "performance": {
-      "score": .9
+      "score": 0.9
     },
     "best-practices": {
       "score": 1
     },
     "seo": {
-      "score": .9
+      "score": 0.9
     },
     "accessibility": {
-      "score": .5
+      "score": 0.5
     }
   }
 }
