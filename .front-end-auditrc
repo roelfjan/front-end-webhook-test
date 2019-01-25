@@ -2,5 +2,22 @@
   "urls": [
     "http://haags.nu"
   ],
-  "runs": 1
+  "runs": 1,
+  "lighthouse": {
+    "pwa": {
+      score: .8
+    },
+    "performance": {
+      score: .9
+    },
+    "best-practices": {
+      score: 1
+    },
+    "seo": {
+      score: .9
+    },
+    "accessibility: {
+      score: .5
+    }
+  }
 }
