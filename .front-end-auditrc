@@ -16,7 +16,7 @@
     "seo": {
       score: .9
     },
-    "accessibility: {
+    "accessibility": {
       score: .5
     }
   }
