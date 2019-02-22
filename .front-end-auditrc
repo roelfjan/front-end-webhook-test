@@ -4,9 +4,6 @@
   ],
   "runs": 1,
   "lighthouse": {
-    "pwa": {
-      "score": 0.8
-    },
     "performance": {
       "score": 0.9
     },
