@@ -1,6 +1,7 @@
 {
   "urls": [
-    "https://haags.nu"
+    "https://haags.nu",
+    "http://www.roelf-jandevries.nl"
   ],
   "runs": 1,
   "lighthouse": {
