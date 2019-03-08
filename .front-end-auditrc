@@ -1,19 +1,16 @@
 {
   "urls": [
-    "http://haags.nu"
+    "https://haags.nu"
   ],
   "runs": 1,
   "lighthouse": {
-    "pwa": {
-      "score": 0.8
-    },
     "performance": {
       "score": 0.9
     },
     "best-practices": {
       "score": 1
     },
-    "seo": {
+    "pwa": {
       "score": 0.9
     },
     "accessibility": {
