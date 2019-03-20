@@ -1,11 +1,12 @@
 {
   "urls": [
-    "https://haags.nu"
+    "https://haags.nu",
+    "http://www.roelf-jandevries.nl"
   ],
   "runs": 1,
   "lighthouse": {
     "performance": {
-      "score": 0.9
+      "score": 0.4
     },
     "best-practices": {
       "score": 1
