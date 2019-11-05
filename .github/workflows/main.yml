@@ -3,27 +3,36 @@ on:
   pull_request:
     types: labeled
 jobs:
-  lighthouse:
+  # lighthouse:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - name: Audit URLs using Lighthouse and ensure performance budget
+  #       uses: treosh/lighthouse-ci-action@v1
+  #       with:
+  #         urls: |
+  #           https://haags.nu/
+  #           http://www.roelf-jandevries.nl/
+  #         budgetPath: ./budget.json
+  #     - name: Save results
+  #       uses: actions/upload-artifact@master
+  #       with:
+  #         name: lighthouse-results
+  #         path: './results'
+  #     - name: Lighthouse Check
+  #       uses: foo-software/lighthouse-check-action@v1.0.2
+  #       with:
+  #         accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+  #         author: ${{ github.actor }}
+  #         branch: ${{ github.ref }}
+  #         urls: 'https://haags.nu,http://roelf-jandevries'
+  #         sha: ${{ github.sha }}
+  webpagetest: 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Audit URLs using Lighthouse and ensure performance budget
-        uses: treosh/lighthouse-ci-action@v1
-        with:
-          urls: |
-            https://haags.nu/
-            http://www.roelf-jandevries.nl/
-          budgetPath: ./budget.json
-      - name: Save results
-        uses: actions/upload-artifact@master
-        with:
-          name: lighthouse-results
-          path: './results'
-      - name: Lighthouse Check
-        uses: foo-software/lighthouse-check-action@v1.0.2
-        with:
-          accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
-          author: ${{ github.actor }}
-          branch: ${{ github.ref }}
-          urls: 'https://haags.nu,http://roelf-jandevries'
-          sha: ${{ github.sha }}
+      - name: WebPageTestAction
+        uses: JCofman/webPagetestAction@1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          TEST_URL: https://haags.nu
+          WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
