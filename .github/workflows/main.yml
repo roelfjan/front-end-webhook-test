@@ -19,3 +19,12 @@ jobs:
         with:
           name: lighthouse-results
           path: './results'
+      - name: Lighthouse Check
+        uses: foo-software/lighthouse-check-action@v1.0.2
+        with:
+          accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          author: ${{ github.actor }}
+          branch: ${{ github.ref }}
+          outputDirectory: /tmp/artifacts
+          urls: 'https://haags.nu,http://roelf-jandevries'
+          sha: ${{ github.sha }}
