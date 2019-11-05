@@ -1,5 +1,7 @@
 name: Lighthouse Audit
-on: label
+on: 
+  pull_request:
+    types: labeled
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
