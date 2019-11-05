@@ -1,0 +1,19 @@
+name: Lighthouse Audit
+on: label
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Audit URLs using Lighthouse and ensure performance budget
+        uses: treosh/lighthouse-ci-action@v1
+        with:
+          urls: |
+            https://haags.nu/
+            http://www.roelf-jandevries.nl/
+          budgetPath: ./budget.json
+      - name: Save results
+        uses: actions/upload-artifact@master
+        with:
+          name: lighthouse-results
+          path: './results'
