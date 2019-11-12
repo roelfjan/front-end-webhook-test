@@ -43,8 +43,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: npm install
+      - run: npm install lighthouse
       - run: mv node_modules/lighthouse-plugin-field-performance/* .
-      - run: mv node_modules/lighthouse/* .
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
