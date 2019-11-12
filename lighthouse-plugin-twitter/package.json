@@ -1,0 +1,7 @@
+{
+  "name": "lighthouse-plugin-twitter",
+  "main": "plugin.js",
+  "peerDependencies": {
+    "lighthouse": "^5.0.0"
+  }
+}
