@@ -42,6 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - run: npm install
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
@@ -49,6 +50,7 @@ jobs:
             https://haags.nu
             http://roelf-jandevries.nl
           temporaryPublicStorage: true
+          configPath: ./.lighthouserc
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
