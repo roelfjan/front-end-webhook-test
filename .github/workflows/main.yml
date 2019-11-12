@@ -27,12 +27,29 @@ jobs:
   #         branch: ${{ github.ref }}
   #         urls: 'https://haags.nu,http://roelf-jandevries'
   #         sha: ${{ github.sha }}
-  webpagetest: 
+  # webpagetest: 
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: WebPageTestAction
+  #       uses: JCofman/webPagetestAction@1.0.0
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+  #         TEST_URL: https://haags.nu
+  #         WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
+
+  #         name: Lighthouse
+  lighthouse:
     runs-on: ubuntu-latest
     steps:
-      - name: WebPageTestAction
-        uses: JCofman/webPagetestAction@1.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
-          TEST_URL: https://haags.nu
-          WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
+      - uses: actions/checkout@v1
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          urls: |
+            https://haags.nu
+            http://roelf-jandevries.nl
+      - name: Save results
+        uses: actions/upload-artifact@v1
+        with:
+          name: lighthouse-results
+          path: '.lighthouseci' # This will save the Lighthouse results as .json files
