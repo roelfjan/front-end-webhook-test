@@ -1,6 +1,6 @@
 module.exports = {
   // Additional audits to run on information Lighthouse gathered.
-  audits: [{path: 'lighthouse-plugin-cats/audits/has-cat-images.js'}],
+  audits: [{path: 'lighthouse-plugin-twitter/audits/has-cat-images.js'}],
 
   // A new category in the report for the plugin output.
   category: {
