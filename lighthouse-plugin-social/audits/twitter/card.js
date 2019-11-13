@@ -14,8 +14,6 @@ class TwitterCardAudit extends Audit {
   static audit(artifacts) {
     const metaTag = artifacts.MetaElements.find(el => el.name === 'twitter:card');
 
-    console.log(artifacts.MetaElements);
-
     if (metaTag && 
       metaTag.content && 
       metaTag.content.match(/^(summary|summary_large_image|app|player)$/)) {
