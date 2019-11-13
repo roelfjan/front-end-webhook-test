@@ -1,5 +1,5 @@
 {
-  "name": "lighthouse-plugin-twitter",
+  "name": "lighthouse-plugin-social",
   "main": "plugin.js",
   "peerDependencies": {
     "lighthouse": "^5.0.0"
