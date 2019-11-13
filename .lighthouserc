@@ -4,7 +4,7 @@
       "numberOfRuns": 2,
       "settings": {
         "plugins": [
-          "lighthouse-plugin-field-performance"
+          "lighthouse-plugin-social"
         ]
       }
     }
