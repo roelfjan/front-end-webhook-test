@@ -1,7 +1,7 @@
 module.exports = {
   audits: [
-    { path: 'lighthouse-plugin-social/audits/twitter/card.js' },
-    { path: 'lighthouse-plugin-social/audits/twitter/manual-check.js' }
+    { path: './audits/twitter/card.js' },
+    { path: './audits/twitter/manual-check.js' }
   ],
   category: {
     title: 'Social',
