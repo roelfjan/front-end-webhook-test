@@ -1,11 +1,8 @@
 module.exports = {
-  // Additional audits to run on information Lighthouse gathered.
   audits: [
     { path: 'lighthouse-plugin-social/audits/twitter/card.js' },
     { path: 'lighthouse-plugin-social/audits/twitter/manual-check.js' }
   ],
-
-  // A new category in the report for the plugin output.
   category: {
     title: 'Social',
     description:
