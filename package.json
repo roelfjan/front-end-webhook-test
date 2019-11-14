@@ -1,0 +1,9 @@
+{
+  "name": "front-end-webhook-test",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "lighthouse-plugin-field-performance": "^1.1.1",
+    "lighthouse-plugin-social-sharing": "0.0.1"
+  }
+}

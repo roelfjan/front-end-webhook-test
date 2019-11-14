@@ -1,0 +1,12 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 2,
+      "settings": {
+        "plugins": [
+          "lighthouse-plugin-social-sharing"
+        ]
+      }
+    }
+  }
+}
