@@ -4,6 +4,5 @@
   "description": "",
   "devDependencies": {
     "lighthouse-plugin-field-performance": "^1.1.1"
-  },
-  "dependencies": {}
+  }
 }
